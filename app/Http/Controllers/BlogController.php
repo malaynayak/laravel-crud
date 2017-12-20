@@ -3,9 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Blog;
 
 class BlogController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +24,9 @@ class BlogController extends Controller
      */
     public function index()
     {
-        //
+        $blogs = Blog::latest()->paginate(10);
+        return view('blog.index',compact('blogs'))
+            ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -23,7 +36,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        //
+        return view('blog.create');
     }
 
     /**
@@ -34,7 +47,13 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        request()->validate([
+            'title' => 'required',
+            'content' => 'required',
+        ]);
+        Blog::create($request->all());
+        return redirect()->route('blogs.index')
+            ->with('success','Blog created successfully');
     }
 
     /**
@@ -45,7 +64,8 @@ class BlogController extends Controller
      */
     public function show($id)
     {
-        //
+        $blog = Blog::load($id);
+        return view('blog.show',compact('blog'));
     }
 
     /**
@@ -56,7 +76,7 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('blog.edit');
     }
 
     /**
@@ -68,7 +88,14 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $blog = Blog::load($id);
+        request()->validate([
+            'title' => 'required',
+            'content' => 'required',
+        ]);
+        $blog->update($request->all());
+        return redirect()->route('blog.index')
+            ->with('success','Blog updated successfully');
     }
 
     /**
@@ -79,6 +106,8 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Blog::destroy($id);
+        return redirect()->route('blogs.index')
+            ->with('success','Blog deleted successfully');
     }
 }
