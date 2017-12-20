@@ -17,8 +17,9 @@ class CreateBlogsTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->string('title');
-            $table->string('content');
+            $table->longText('content');
             $table->integer('featured_image');
+            $table->tinyInteger('published');
             $table->timestamps();
         });
     }
