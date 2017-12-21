@@ -52,7 +52,17 @@ class BlogController extends Controller
             'content' => 'required',
             'featured_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
-        Blog::create($request->all());
+        $blog = Blog::create($request->all());
+
+        if($request->file('featured_image')){
+            $imageName = $blog->id . '.' . time() .
+            $request->file('featured_image')->getClientOriginalExtension();
+            $request->file('featured_image')->move(
+                base_path() . '/public/images/blog/', $imageName
+            );
+            $blog->featured_image  = 'images/blog/'. $imageName;
+            $blog->save();
+        }
         return redirect()->route('blogs.index')
             ->with('success','Blog created successfully');
     }

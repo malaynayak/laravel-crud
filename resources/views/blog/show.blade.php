@@ -16,6 +16,11 @@
         <div class="col-lg-12 margin-tb">
             <div class="panel panel-default">
                 <div class="panel-body">
+                    <img width="100%" height="400px" src="{{ asset($blog->featured_image) }}" alt="logo">
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
                     <p>{!! $blog->content !!}</p>
                 </div>
             </div>
