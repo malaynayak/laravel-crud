@@ -4,17 +4,19 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12 margin-tb">
-            <h2>Add Blog</h2>
+            <div class="pull-left">
+                <h2>{{ $blog->title }}</h2>
+            </div>
+            <div class="pull-right">
+                <a class="btn btn-success" href="{{ route('blogs.index') }}"> Back</a>
+            </div>
         </div>
     </div>
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <form no-validate class="form-horizontal" method="POST" action="{{ route('blogs.store') }}" enctype="multipart/form-data">
-                        {{ csrf_field() }}
-                        @include('blog.form')
-                    </form>
+                    <p>{!! $blog->content !!}</p>
                 </div>
             </div>
         </div>

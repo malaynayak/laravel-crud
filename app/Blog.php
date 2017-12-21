@@ -38,3 +38,4 @@ class Blog extends Model
     }
 
 }
+

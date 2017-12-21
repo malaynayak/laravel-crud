@@ -50,6 +50,7 @@ class BlogController extends Controller
         request()->validate([
             'title' => 'required',
             'content' => 'required',
+            'featured_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
         Blog::create($request->all());
         return redirect()->route('blogs.index')
@@ -64,7 +65,7 @@ class BlogController extends Controller
      */
     public function show($id)
     {
-        $blog = Blog::load($id);
+        $blog = Blog::find($id);
         return view('blog.show',compact('blog'));
     }
 
@@ -76,7 +77,8 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        return view('blog.edit');
+        $blog = Blog::find($id);
+        return view('blog.edit', compact('blog'));
     }
 
     /**
@@ -88,13 +90,14 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $blog = Blog::load($id);
+        $blog = Blog::find($id);
         request()->validate([
             'title' => 'required',
             'content' => 'required',
+            'featured_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
         $blog->update($request->all());
-        return redirect()->route('blog.index')
+        return redirect()->route('blogs.index')
             ->with('success','Blog updated successfully');
     }
 

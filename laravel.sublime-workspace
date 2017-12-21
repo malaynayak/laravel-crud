@@ -32,45 +32,10 @@
 	"buffers":
 	[
 		{
-			"file": "database/migrations/2017_12_19_094905_create_blogs_table.php",
-			"settings":
-			{
-				"buffer_size": 749,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "database/migrations/2017_12_19_102954_create_comments_table.php",
-			"settings":
-			{
-				"buffer_size": 712,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/Comment.php",
-			"settings":
-			{
-				"buffer_size": 348,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "app/Blog.php",
 			"settings":
 			{
-				"buffer_size": 360,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/User.php",
-			"settings":
-			{
-				"buffer_size": 666,
+				"buffer_size": 714,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -79,8 +44,53 @@
 			"file": "app/Http/Controllers/BlogController.php",
 			"settings":
 			{
-				"buffer_size": 1507,
+				"buffer_size": 2613,
 				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/User.php",
+			"settings":
+			{
+				"buffer_size": 664,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/blog/form.blade.php",
+			"settings":
+			{
+				"buffer_size": 2304,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/blog/create.blade.php",
+			"settings":
+			{
+				"buffer_size": 469,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/blog/index.blade.php",
+			"settings":
+			{
+				"buffer_size": 1896,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "@extends('layouts.default')"
+			}
+		},
+		{
+			"file": "resources/views/auth/login.blade.php",
+			"settings":
+			{
+				"buffer_size": 3053,
 				"line_ending": "Unix"
 			}
 		},
@@ -88,7 +98,7 @@
 			"file": "routes/web.php",
 			"settings":
 			{
-				"buffer_size": 588,
+				"buffer_size": 577,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -101,22 +111,6 @@
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
-		},
-		{
-			"file": "app/Http/Controllers/Auth/RegisterController.php",
-			"settings":
-			{
-				"buffer_size": 1817,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "resources/views/auth/register.blade.php",
-			"settings":
-			{
-				"buffer_size": 3517,
-				"line_ending": "Unix"
-			}
 		}
 	],
 	"build_system": "",
@@ -127,7 +121,7 @@
 	"command_palette":
 	{
 		"height": 392.0,
-		"last_filter": "",
+		"last_filter": "ref",
 		"selected_items":
 		[
 			[
@@ -191,7 +185,7 @@
 				"Package Control: Remove Repository"
 			]
 		],
-		"width": 461.0
+		"width": 587.0
 	},
 	"console":
 	{
@@ -220,29 +214,37 @@
 	"expanded_folders":
 	[
 		"/var/www/html/laravel-crud",
-		"/var/www/html/laravel-crud/routes"
+		"/var/www/html/laravel-crud/resources",
+		"/var/www/html/laravel-crud/resources/views",
+		"/var/www/html/laravel-crud/resources/views/blog"
 	],
 	"file_history":
 	[
-		"/var/www/html/laravel-crud/app/Http/Controllers/BlogController.php",
-		"/var/www/html/laravel-crud/vendor/laravel/framework/src/Illuminate/Routing/Route.php",
-		"/var/www/html/AChecker-master/include/classes/exportRpt/exportTFPDF.class.php",
+		"/var/www/html/laravel-crud/database/migrations/2017_12_19_094905_create_blogs_table.php",
+		"/var/www/html/laravel-crud/vendor/laravel/framework/src/Illuminate/Support/Facades/Auth.php",
+		"/var/www/html/laravel-crud/resources/views/auth/login.blade.php",
+		"/var/www/html/laravel-crud/resources/views/home.blade.php",
+		"/var/www/html/laravel-crud/resources/views/auth/register.blade.php",
+		"/var/www/html/laravel-crud/app/User.php",
+		"/var/www/html/laravel-crud/app/Comment.php",
+		"/var/www/html/laravel-crud/database/migrations/2017_12_19_102954_create_comments_table.php",
+		"/var/www/html/laravel-crud/app/Http/Controllers/HomeController.php",
 		"/var/www/html/laravel-crud/app/Http/Controllers/Auth/RegisterController.php",
+		"/var/www/html/laravel-crud/vendor/laravel/framework/src/Illuminate/Routing/Route.php",
+		"/var/www/html/drupal8/modules/custom/test_module/composer.json",
+		"/home/TECHASPECT/malay.nayak/Downloads/printable/composer.json",
+		"/var/www/html/laravel-crud/app/Http/Controllers/BlogController.php",
+		"/var/www/html/AChecker-master/include/classes/exportRpt/exportTFPDF.class.php",
 		"/var/www/html/laravel-crud/routes/channels.php",
 		"/var/www/html/laravel-crud/routes/console.php",
 		"/var/www/html/laravel-crud/routes/api.php",
-		"/var/www/html/laravel-crud/resources/views/auth/login.blade.php",
 		"/var/www/html/laravel-crud/app/Http/Controllers/Auth/LoginController.php",
-		"/var/www/html/laravel-crud/app/Http/Controllers/HomeController.php",
 		"/var/www/html/AChecker-master/index.php",
 		"/var/www/html/AChecker-master/include/header.inc.php",
 		"/var/www/html/AChecker-master/themes/default/include/header.tmpl.php",
-		"/var/www/html/laravel-crud/app/Comment.php",
 		"/var/www/html/AChecker-master/include/lib/tfpdf/tfpdf.php",
 		"/var/www/html/AChecker-master/include/vitals.inc.php",
-		"/var/www/html/laravel-crud/database/migrations/2017_12_19_102954_create_comments_table.php",
 		"/var/www/html/laravel-crud/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php",
-		"/var/www/html/laravel-crud/app/User.php",
 		"/var/www/html/laravel-crud/.env",
 		"/var/www/html/laravel-crud/app/Providers/AppServiceProvider.php",
 		"/var/www/html/laravel-crud/vendor/laravel/framework/src/Illuminate/Support/Facades/Schema.php",
@@ -345,17 +347,11 @@
 		"/var/www/html/drupal8/modules/contrib/httpcsvalidation/src/Includes/httpcsConfig.php",
 		"/var/www/html/drupal8/modules/contrib/httpcsvalidation/src/Helper/HttpcsFormHandler.php",
 		"/home/TECHASPECT/malay.nayak/Work/actency-docker/code/HRM/index.php",
-		"/home/TECHASPECT/malay.nayak/Work/actency-docker/docker-compose.yml",
-		"/etc/httpd/conf/httpd.conf",
-		"/etc/apache2/apache2.conf",
-		"/home/TECHASPECT/malay.nayak/Work/actency-docker/code/HRM/symfony/config/databases.yml",
-		"/var/www/html/HRM/installer/utils/ExceptionHandler.php",
-		"/home/TECHASPECT/malay.nayak/Work/actency-docker/code/index.php",
-		"/var/www/html/HRM/symfony/config/databases.yml"
+		"/home/TECHASPECT/malay.nayak/Work/actency-docker/docker-compose.yml"
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 26.0
 	},
 	"find_in_files":
 	{
@@ -374,6 +370,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"featured_image",
+			"password",
+			"Password",
+			"password",
+			"email",
+			"name",
 			"view('auth.register')",
 			"Confirm Password",
 			"achecker",
@@ -433,109 +435,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "database/migrations/2017_12_19_094905_create_blogs_table.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 749,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								710,
-								710
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 238.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "database/migrations/2017_12_19_102954_create_comments_table.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 712,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6,
-								6
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/Comment.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 348,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								348,
-								348
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "app/Blog.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 360,
+						"buffer_size": 714,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								140,
-								140
+								352,
+								359
 							]
 						],
 						"settings":
@@ -547,24 +459,114 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "app/User.php",
+					"buffer": 1,
+					"file": "app/Http/Controllers/BlogController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 666,
+						"buffer_size": 2613,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								234,
-								234
+								593,
+								593
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/User.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 664,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								645,
+								645
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "resources/views/blog/form.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2304,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								449,
+								449
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "resources/views/blog/create.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 469,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								177,
+								177
 							]
 						],
 						"settings":
@@ -582,29 +584,30 @@
 				},
 				{
 					"buffer": 5,
-					"file": "app/Http/Controllers/BlogController.php",
+					"file": "resources/views/blog/index.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1507,
+						"buffer_size": 1896,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1047,
-								1047
+								876,
+								876
 							]
 						],
 						"settings":
 						{
+							"auto_name": "@extends('layouts.default')",
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 756.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -612,24 +615,26 @@
 				},
 				{
 					"buffer": 6,
-					"file": "routes/web.php",
+					"file": "resources/views/auth/login.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 588,
+						"buffer_size": 3053,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								585,
-								585
+								162,
+								181
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -640,6 +645,34 @@
 				},
 				{
 					"buffer": 7,
+					"file": "routes/web.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 577,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								453,
+								453
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
 					"file": "vendor/laravel/framework/src/Illuminate/Foundation/Auth/RegistersUsers.php",
 					"semi_transient": false,
 					"settings":
@@ -651,8 +684,8 @@
 						"selection":
 						[
 							[
-								1363,
-								1363
+								796,
+								796
 							]
 						],
 						"settings":
@@ -662,70 +695,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 712.0,
+						"translation.y": 360.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "app/Http/Controllers/Auth/RegisterController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1817,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1808,
-								1808
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 771.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "resources/views/auth/register.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3517,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2934,
-								2934
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 972.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
+					"stack_index": 8,
 					"type": "text"
 				}
 			]
@@ -783,6 +756,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"homecontroller",
+				"laravel-crud/app/Http/Controllers/HomeController.php"
+			],
 			[
 				"appserviceprovider.php",
 				"laravel-crud/app/Providers/AppServiceProvider.php"
