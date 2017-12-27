@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 class Blog extends Model
 {
@@ -32,10 +33,20 @@ class Blog extends Model
      */
     public function save(array $options = [])
     {
-      $this->user_id = Auth::id();
-      $this->published = ($this->published == 'on') ? 1 : 0;
-      parent::save();
+        $this->user_id = Auth::id();
+        $this->published = ($this->published == 'on' || $this->published) ? 1 : 0;
+        parent::save();
     }
 
+    /**
+     * @inheritdoc
+     */
+    public function delete()
+    {
+        if($this->featured_image){
+            File::delete(base_path() . '/public/' . $this->featured_image );
+        }
+        parent::delete();
+    }
 }
 

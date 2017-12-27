@@ -32,7 +32,7 @@
                 @foreach ($blogs as $blog)
                 <tr>
                     <td>{{ ++$i }}</td>
-                    <td>{{ $blog->title }}</td>
+                    <td>{{ str_limit($blog->title, $limit = 100, $end = '...') }}</td>
                     <td>{{ $blog->author->name }}</td>
                     <td>
                         <span class="label label-{{ $blog->published ? 'success' : 'danger' }}">

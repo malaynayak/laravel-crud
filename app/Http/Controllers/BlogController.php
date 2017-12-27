@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Blog;
+use Illuminate\Support\Facades\File;
 
 class BlogController extends Controller
 {
@@ -26,7 +27,7 @@ class BlogController extends Controller
     {
         $blogs = Blog::latest()->paginate(10);
         return view('blog.index',compact('blogs'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+            ->with('i', (request()->input('page', 1) - 1) * 10);
     }
 
     /**
@@ -55,8 +56,8 @@ class BlogController extends Controller
         $blog = Blog::create($request->all());
 
         if($request->file('featured_image')){
-            $imageName = $blog->id . '.' . time() .
-            $request->file('featured_image')->getClientOriginalExtension();
+            $imageName = $blog->id . '_' . time() . '.' .
+                $request->file('featured_image')->getClientOriginalExtension();
             $request->file('featured_image')->move(
                 base_path() . '/public/images/blog/', $imageName
             );
@@ -106,7 +107,19 @@ class BlogController extends Controller
             'content' => 'required',
             'featured_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
+        if($blog->featured_image){
+            File::delete(base_path() . '/public/' . $blog->featured_image );
+        }
         $blog->update($request->all());
+        if($request->file('featured_image')) {
+            $imageName = $blog->id . '_' . time() . '.' .
+                $request->file('featured_image')->getClientOriginalExtension();
+            $request->file('featured_image')->move(
+                base_path() . '/public/images/blog/', $imageName
+            );
+            $blog->featured_image  = 'images/blog/'. $imageName;
+            $blog->save();
+        }
         return redirect()->route('blogs.index')
             ->with('success','Blog updated successfully');
     }

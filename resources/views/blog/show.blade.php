@@ -5,9 +5,10 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>{{ $blog->title }}</h2>
+                <h2>{{ str_limit($blog->title, $limit = 65, $end = '...') }}</h2>
             </div>
             <div class="pull-right">
+                <a class="btn btn-primary" href="{{ route('blogs.edit',$blog->id) }}">Edit</a>
                 <a class="btn btn-success" href="{{ route('blogs.index') }}"> Back</a>
             </div>
         </div>
