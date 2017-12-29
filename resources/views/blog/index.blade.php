@@ -46,7 +46,9 @@
                             method="POST" action="{{ route('blogs.destroy', $blog->id) }}">
                             {{ csrf_field() }}
                             <input name="_method" type="hidden" value="DELETE">
-                            <button type="submit" class="btn btn-danger">Delete</button>
+                            <button type="submit"
+                                onclick="return confirm('Are you sure you want to delete this blog ?');"
+                                class="btn btn-danger">Delete</button>
                         </form>
                     </td>
                 </tr>
