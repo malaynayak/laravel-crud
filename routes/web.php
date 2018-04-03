@@ -11,14 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'SiteController@index');
 
 Auth::routes();
 
-Route::get('/admin', 'AdminController@index')->name('home');
+Route::get('/admin', 'Admin\AdminController@index')->name('home');
 
 Route::prefix('admin')->group(function () {
-    Route::resource('blogs', 'BlogController');
+    Route::resource('blogs', 'Admin\BlogController');
 });
