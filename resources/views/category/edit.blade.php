@@ -4,16 +4,18 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12 margin-tb">
-            <h2>Add Blog</h2>
+            <h2>Edit Category - {{ $category->title }}</h2>
         </div>
     </div>
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <form no-validate class="form-horizontal" method="POST" action="{{ route('blogs.store') }}" enctype="multipart/form-data">
+                    <form class="form-horizontal" method="POST" action="{{ route('categories.update', $category->id) }}"
+                        enctype="multipart/form-data">
                         {{ csrf_field() }}
-                        @include('blog.form', ['categories' => $categories])
+                        <input name="_method" type="hidden" value="PATCH">
+                        @include('category.form')
                     </form>
                 </div>
             </div>

@@ -19,4 +19,5 @@ Route::get('/admin', 'Admin\AdminController@index')->name('home');
 
 Route::prefix('admin')->group(function () {
     Route::resource('blogs', 'Admin\BlogController');
+    Route::resource('categories', 'Admin\CategoryController');
 });

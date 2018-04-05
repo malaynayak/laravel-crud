@@ -3,9 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-use App\Blog;
 use Illuminate\Support\Facades\File;
 use App\Http\Controllers\Controller;
+use App\Blog;
+use App\Category;
 
 class BlogController extends Controller
 {
@@ -38,7 +39,8 @@ class BlogController extends Controller
      */
     public function create()
     {
-        return view('blog.create');
+        $categories = Category::all();
+        return view('blog.create', compact('categories'));
     }
 
     /**
@@ -52,7 +54,8 @@ class BlogController extends Controller
         request()->validate([
             'title' => 'required',
             'content' => 'required',
-            'featured_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+            'featured_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'category_id' => 'required'
         ]);
         $blog = Blog::create($request->all());
 
@@ -90,7 +93,8 @@ class BlogController extends Controller
     public function edit($id)
     {
         $blog = Blog::find($id);
-        return view('blog.edit', compact('blog'));
+        $categories = Category::all();
+        return view('blog.edit', compact('blog', 'categories'));
     }
 
     /**
@@ -106,13 +110,14 @@ class BlogController extends Controller
         request()->validate([
             'title' => 'required',
             'content' => 'required',
-            'featured_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+            'featured_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'category_id' => 'required'
         ]);
-        if($blog->featured_image){
-            File::delete(base_path() . '/public/' . $blog->featured_image );
-        }
         $blog->update($request->all());
         if($request->file('featured_image')) {
+            if($blog->featured_image){
+                File::delete(base_path() . '/public/' . $blog->featured_image );
+            }
             $imageName = $blog->id . '_' . time() . '.' .
                 $request->file('featured_image')->getClientOriginalExtension();
             $request->file('featured_image')->move(

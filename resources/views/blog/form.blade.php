@@ -12,6 +12,24 @@
     </div>
 </div>
 
+<div class="form-group{{ $errors->has('category') ? ' has-error' : '' }}">
+    <label for="category_id" class="col-md-2 control-label">Category</label>
+
+    <div class="col-md-10">
+        <select class="form-control" name="category_id">
+            @foreach ($categories as $category)
+                <option {{ ( isset($blog) && $blog->category_id == $category->id ) ? 'selected' : '' }}
+                    value="{{ $category->id }}">{{ $category->title }}</option>
+            @endforeach
+        </select>
+        @if ($errors->has('category_id'))
+            <span class="help-block">
+                <strong>{{ $errors->first('ategory_id') }}</strong>
+            </span>
+        @endif
+    </div>
+</div>
+
 <div class="form-group{{ $errors->has('content') ? ' has-error' : '' }}">
     <label for="content" class="col-md-2 control-label">Content</label>
 
@@ -45,6 +63,9 @@
     <div class="col-md-10">
         <label for="published" class="control-label">
             <input {{ (isset($blog)) ? ($blog->published ? 'checked' : '' ) : (old('published') ? 'checked' : '') }} id="published" type="checkbox" name="published"> Publish
+            </label>
+        <label for="featured" class="control-label">
+            <input {{ (isset($blog)) ? ($blog->featured ? 'checked' : '' ) : (old('featured') ? 'checked' : '') }} id="featured" type="checkbox" name="featured"> Featured
             </label>
     </div>
 </div>

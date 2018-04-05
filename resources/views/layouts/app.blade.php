@@ -29,7 +29,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        {{ config('app.name', 'Home') }}
                     </a>
                 </div>
 
@@ -54,6 +54,7 @@
                                 <ul class="dropdown-menu">
                                     <li>
                                         <a href="{{ route('blogs.index') }}" > Blogs</a>
+                                        <a href="{{ route('categories.index') }}" > Categories</a>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

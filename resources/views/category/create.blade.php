@@ -4,16 +4,16 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12 margin-tb">
-            <h2>Add Blog</h2>
+            <h2>Add Category</h2>
         </div>
     </div>
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <form no-validate class="form-horizontal" method="POST" action="{{ route('blogs.store') }}" enctype="multipart/form-data">
+                    <form no-validate class="form-horizontal" method="POST" action="{{ route('categories.store') }}" enctype="multipart/form-data">
                         {{ csrf_field() }}
-                        @include('blog.form', ['categories' => $categories])
+                        @include('category.form')
                     </form>
                 </div>
             </div>

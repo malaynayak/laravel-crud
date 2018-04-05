@@ -15,7 +15,7 @@
                         enctype="multipart/form-data">
                         {{ csrf_field() }}
                         <input name="_method" type="hidden" value="PATCH">
-                        @include('blog.form')
+                        @include('blog.form', ['categories' => $categories])
                     </form>
                 </div>
             </div>
